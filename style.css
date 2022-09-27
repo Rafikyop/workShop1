@@ -63,10 +63,16 @@ body {
 }
 
 .charizard-container {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+  width: 100%;
   gap: 20px;
+}
+
+.pokemonDetails {
+  display: flex;
+}
+
+.image-charizard {
+  width: 50%;
 }
 
 .title {
@@ -82,10 +88,6 @@ body {
 .title figure img {
   width: 50px;
   height: 50px;
-}
-
-.image-charizard {
-  width: 100%;
 }
 
 .image-charizard img {

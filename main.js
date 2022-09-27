@@ -1,20 +1,22 @@
 import { getInfo, getDataUnique } from "./scripts/process.js";
-import { printPokemons } from "./scripts/ui.js";
+import { mainUi } from "./scripts/ui.js";
 
 const mainFunction = async () => {
-  let data = await getInfo();
+  let pokemonURLS = await getInfo();
   let responseInfo = [];
-  data.forEach((element) => {
+  let pokemonsData = [];
+  pokemonURLS.forEach((element) => {
     let infoPokemons = getDataUnique(element.url);
     responseInfo.push(infoPokemons);
   });
 
   const newResponse = await Promise.all(responseInfo);
 
-  data.forEach((_, index) => {
-    data[index].info = newResponse[index];
+  pokemonURLS.forEach((_, index) => {
+    pokemonsData[index] = newResponse[index];
   });
-  printPokemons(data);
+  console.log(pokemonsData);
+  mainUi(pokemonsData);
 };
 
 mainFunction();
