@@ -69,6 +69,7 @@ body {
 
 .pokemonDetails {
   display: flex;
+  gap: 60px;
 }
 
 .image-charizard {
