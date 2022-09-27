@@ -93,6 +93,7 @@ export const mainUi = (pokemonsData) => {
     };
 
     btnFindPokemon.addEventListener("click", finalPokemon);
+
     squirtleBtn.addEventListener("click", () => {
       filterArray("squirtle");
     });
