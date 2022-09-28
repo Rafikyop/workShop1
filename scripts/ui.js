@@ -3,6 +3,8 @@ const selectPokemon = document.getElementById("selectPokemon");
 const btnFindPokemon = document.getElementById("findPokemon");
 const squirtleBtn = document.getElementById("squirtleButton");
 const butterfreeBtn = document.getElementById("butterfreeButton");
+const charmanderBtn = document.getElementById("charmanderButton");
+const bulbasaurBtn = document.getElementById("bulbasaurButton");
 
 export const mainUi = (pokemonsData) => {
   const printPokemons = (listPokemons) => {
@@ -96,6 +98,16 @@ export const mainUi = (pokemonsData) => {
 
     squirtleBtn.addEventListener("click", () => {
       filterArray("squirtle");
+    });
+    butterfreeBtn.addEventListener("click", () => {
+      filterArray("butterfree");
+    });
+    charmanderBtn.addEventListener("click", () => {
+      filterArray("charmander");
+    });
+
+    bulbasaurBtn.addEventListener("click", () => {
+      filterArray("bulbasaur");
     });
   };
 

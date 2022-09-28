@@ -7,7 +7,6 @@ export const getInfo = async () => {
   //     const {data} = await axios.get(pokemon.url)
   //     results[index].info = data
   // });
-  console.log(results, "hola mamaguevagamjogbskbgsoe");
   return results;
 };
 
